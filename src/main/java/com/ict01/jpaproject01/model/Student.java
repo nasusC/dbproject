@@ -14,6 +14,7 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // AUTO = hivernate가 자동으로 설정해줌
     // IDENTITY = mysql
     // Sequence = oracle
     private int id;

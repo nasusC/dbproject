@@ -1,15 +1,13 @@
 package com.ict01.jpaproject01.controller;
 
+import com.ict01.jpaproject01.ResourceNotFoundExeption;
 import com.ict01.jpaproject01.model.Student;
 import com.ict01.jpaproject01.service.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -38,10 +36,10 @@ public class StudentController {
         // (2) 가져온 Students Collection을 view에 전달한다.
         model.addAttribute("students",students);
 
-
         // http://localhost:8080/student/lists/WEB-INF/views/listStudents.jsp
         return "listStudent";
     }
+
 //    [1]-2
 //    @ResponseBody
 //    public List<Student> list() throws ClassNotFoundException, SQLException {
@@ -50,17 +48,33 @@ public class StudentController {
 //        return students;
 //    }
 
+
+
     // [2] 학생정보 등록
     // [2-1] 학생정보 등록 Form
-    @GetMapping("/showForm")
-    public String
+    @GetMapping("/showForm") // URI
+    public String showFormAdd(Model model){
+        Student student = new Student(); // 새로운 객체 생성
+        model.addAttribute("student",student); // 모델에 addAttribute를 통해 생성된 객체에서 받아온 정보를 view에 전달.
+        // WEB-INF/views/studentForm.jsp 로 찾아간다.
+        return "studentForm";
+    }
 
 
     // [2-2] 학생정보 Action
-    @PostMapping()
+    @PostMapping("/saveStudent")
+    public String saveStudent(@ModelAttribute("student")Student student){
+        studentService.saveStudent(student);
+        return "redirect:/student/lists";
+    }
 
     // [3]
 
 
-    // [4]
+    // [4] 학생정보 삭제
+    @GetMapping("/delete")
+    public String deleteStudent(@RequestParam("studentId")int id)throws ResourceNotFoundExeption {
+        studentService.deleteStudent(id);
+        return "redirect:/student/lists";
+    }
 }
