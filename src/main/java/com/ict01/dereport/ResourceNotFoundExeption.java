@@ -1,4 +1,4 @@
-package com.ict01.jpaproject01;
+package com.ict01.dereport;
 
 public class ResourceNotFoundExeption extends Exception {
 

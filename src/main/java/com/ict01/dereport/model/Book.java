@@ -1,4 +1,4 @@
-package com.ict01.jpaproject01.model;
+package com.ict01.dereport.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Student {
+public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,11 +20,13 @@ public class Student {
     private int id;
 
     @Column(length = 30) // 행의 길이 30
-    private String name;
+    private String bookName;
 
     @Column(length = 30)
-    private String email;
+    private String author;
 
-    @Column(length = 100)
-    private String address;
+    @Column(length = 1000)
+    private int price;
 }
+
+

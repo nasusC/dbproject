@@ -1,10 +1,10 @@
-package com.ict01.jpaproject01;
+package com.ict01.dereport;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Jpaproject01ApplicationTests {
+class BookApplicationTests {
 
     @Test
     void contextLoads() {

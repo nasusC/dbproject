@@ -1,4 +1,4 @@
-package com.ict01.jpaproject01;
+package com.ict01.dereport;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(Jpaproject01Application.class);
+        return application.sources(BookApplication.class);
     }
 
 }

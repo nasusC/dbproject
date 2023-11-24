@@ -1,13 +1,13 @@
-package com.ict01.jpaproject01;
+package com.ict01.dereport;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Jpaproject01Application {
+public class BookApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Jpaproject01Application.class, args);
+        SpringApplication.run(BookApplication.class, args);
     }
 
 }
