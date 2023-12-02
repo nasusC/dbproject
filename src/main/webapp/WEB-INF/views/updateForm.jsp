@@ -45,7 +45,7 @@
 </head>
 <body>
 <div class="header text-center">
-  <a href="/" style="text-decoration: none; color: white;">
+  <a href="/lists" style="text-decoration: none; color: white;">
     <h3>도서 관리 시스템 - 책 정보 수정</h3>
 </div>
 <div class="container">

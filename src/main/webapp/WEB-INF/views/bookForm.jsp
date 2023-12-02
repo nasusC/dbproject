@@ -75,7 +75,7 @@
         <br/>
         <div>
           <button type="submit" class="btn btn-primary">등록</button>
-          <a href="/" class="btn btn-secondary">뒤로 가기</a>
+          <a href="/book/lists" class="btn btn-secondary">뒤로 가기</a>
         </div>
       </form:form>
     </div>

@@ -48,7 +48,7 @@ public class BookController {
     }
 
 
-    // [2-2] 학생정보 Action
+    // [2-2] 책정보 Action
     @PostMapping("/saveBook")
     public String saveBook(@ModelAttribute("book")Book book){
         bookService.saveBook(book);

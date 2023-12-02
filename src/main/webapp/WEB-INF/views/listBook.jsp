@@ -54,6 +54,7 @@
 
       </table>
       <div class="panel-heading">
+        <a href="/book/showForm" class="btn btn-primary">등록</a>
         <a href="/" class="btn btn-secondary">뒤로 가기</a>
       </div>
     </div>
